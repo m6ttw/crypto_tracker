@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Crypto Tracker</h1>
+    <h1>CRYPTO TRACKER</h1>
     <tracked-coins-list :trackedCoins="tracked"></tracked-coins-list>
     <div class="main-container">
       <coins-list :coins='coins'></coins-list>
@@ -48,6 +48,10 @@ export default {
     markTracked: function(coin) {
       const index = this.coins.indexOf(coin);
       this.coins[index].isTracked = true;
+    },
+    unmarkTracked: function(coin) {
+      const index = this.coins.indexOf(coin);
+      this.coins[index].isTracked = false;
     }
   },
   mounted(){
@@ -58,6 +62,8 @@ export default {
     });
 
     eventBus.$on("coin-tracked", coin => this.markTracked(coin));
+
+    eventBus.$on("tracking-stopped", coin => this.unmarkTracked(coin));
   },
   components: {
     "coins-list": CoinsList,

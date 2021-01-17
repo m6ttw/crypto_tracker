@@ -20,6 +20,6 @@ export default {
   ul {
     display: flex;
     justify-content: space-around;
+    list-style-type: none;
   }
 </style>
-TrackedCoinsListItem

@@ -1,16 +1,16 @@
 <template lang="html">
   <div v-if='coin'>
-    <h2>Coin Details</h2>
-    <h3>({{coin.symbol}}) {{coin.name}}</h3>
-    <p>{{coin.rank}}</p>
-    <p>Price: ${{coin.price_usd}}</p>
-    <p>Change (%):
+    <h1>({{coin.symbol}}) {{coin.name}}</h1>
+    <button id="track" v-on:click="trackCoin">Track</button>
+    <h3>Price: ${{coin.price_usd}}</h3>
+    <p><b>Change (%):</b>
       <br>1h: {{coin.percent_change_1h}}
       <br>24h: {{coin.percent_change_24h}}
       <br>7 days: {{coin.percent_change_7d}}
     </p>
-    <p>Market Cap: ${{coin.market_cap_usd}}</p>
-    <button v-on:click="trackCoin">Track</button>
+    <p><b>Market Cap: ${{coin.market_cap_usd}}</b>
+      <br>(Rank: {{coin.rank}})
+    </p>
   </div>
 </template>
 
@@ -28,4 +28,14 @@ export default {
 </script>
 
 <style lang="css" scoped>
+  div {
+    height: 340px;
+    width: 500px;
+    padding:30px;
+    border: 2px solid rgb(0, 0, 0);
+    text-align: center;
+  }
+  #track {
+    cursor: pointer;
+  }
 </style>
