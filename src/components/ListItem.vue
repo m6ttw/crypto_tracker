@@ -18,15 +18,15 @@ export default {
 </script>
 
 <style lang="css" scoped>
-  li {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-  li:hover {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-  }
+li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+li:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
 </style>

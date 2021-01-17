@@ -28,14 +28,21 @@ export default {
 </script>
 
 <style lang="css" scoped>
-  div {
-    height: 340px;
-    width: 500px;
-    padding:30px;
-    border: 2px solid rgb(0, 0, 0);
-    text-align: center;
-  }
-  #track {
-    cursor: pointer;
-  }
+div {
+  height: 340px;
+  width: 500px;
+  padding:30px;
+  border: 2px solid rgb(0, 0, 0);
+  margin-left: 20px;
+  text-align: center;
+}
+#track {
+  cursor: pointer;
+  border: 2px solid rgb(42, 235, 51);
+  background-color: rgb(42, 235, 51);
+}
+#track:active {
+  background-color: rgb(0, 0, 0);
+  color: rgb(42, 235, 51);
+}
 </style>

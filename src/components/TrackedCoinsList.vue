@@ -1,5 +1,5 @@
 <template>
-  <div id="tracked-coins-list">
+  <div class="tracked-coins-list">
     <ul>
       <tracked-coins-list-item v-for="(coin, index) in trackedCoins" :coin="coin" :key="index"></tracked-coins-list-item>
     </ul>
@@ -17,9 +17,13 @@ export default {
 </script>
 
 <style>
+  .tracked-coins-list {
+    margin-left: 65px;
+    margin-right: 105px;
+  }
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     list-style-type: none;
   }
 </style>

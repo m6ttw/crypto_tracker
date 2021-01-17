@@ -25,6 +25,7 @@ export default {
     height: 400px;
     overflow-y: scroll;
     border: 2px solid rgb(0, 0, 0);
+    margin-right: 20px;
   }
   #coinsList ul {
     margin: 10px;
@@ -36,12 +37,12 @@ export default {
     list-style-type: none;
   }
   ::-webkit-scrollbar {
-    /* -webkit-appearance: none; */
     width: 7px;
+    background-color: rgb(200, 200, 200);
   }
   ::-webkit-scrollbar-thumb {
-    /* border-radius: 4px; */
-    background-color: black;
+    background-color:grey;
+    box-shadow: white;
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
   }
 </style>

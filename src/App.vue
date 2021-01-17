@@ -76,9 +76,13 @@ export default {
 <style lang="css" scoped>
   h1 {
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
   p {
-    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
   }
   .main-container {
     display: flex;

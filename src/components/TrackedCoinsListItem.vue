@@ -29,14 +29,17 @@ export default {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 25px;
 }
-  /* h3 {
-    text-align: center;
-  }; */
-  #stop {
-    cursor: pointer;
-  }
-  /* #price {
-    text-align: center;
-  } */
+#stop {
+  cursor: pointer;
+  border: 2px solid rgb(253, 61, 61);
+  background-color: rgb(253, 61, 61);
+}
+#stop:active {
+  background-color: rgb(0, 0, 0);
+  color: rgb(253, 61, 61);
+}
 </style>
