@@ -1,5 +1,7 @@
 <template lang="html">
-  <li v-on:click="handleClick">{{coin.name}}</li>
+  <div>
+    <li v-on:click="handleClick">{{coin.name}}</li>
+  </div>
 </template>
 
 <script>

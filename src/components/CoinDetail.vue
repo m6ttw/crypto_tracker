@@ -1,7 +1,8 @@
-
 <template lang="html">
   <div v-if='coin'>
+    <h2>Coin Details</h2>
     <h3>({{coin.symbol}}) {{coin.name}}</h3>
+    <p>{{coin.rank}}</p>
     <p>Price: ${{coin.price_usd}}</p>
     <p>Change (%):
       <br>1h: {{coin.percent_change_1h}}
@@ -9,6 +10,7 @@
       <br>7 days: {{coin.percent_change_7d}}
     </p>
     <p>Market Cap: ${{coin.market_cap_usd}}</p>
+    <button v-on:click="trackCoin">Track</button>
   </div>
 </template>
 
@@ -16,34 +18,14 @@
 import { eventBus } from '../main.js';
 export default {
   name: 'coin-detail',
-  props: ['coin']
+  props: ['coin'],
+  methods: {
+    trackCoin: function() {
+      eventBus.$emit("coin-tracked", this.coin);
+    }
+  }
 }
 </script>
 
 <style lang="css" scoped>
 </style>
-
-
-data () {
-        return {
-            list: [],
-            timer: ''
-        }
-    },
-    created () {
-        this.fetchEventsList();
-        this.timer = setInterval(this.fetchEventsList, 300000)
-    },
-    methods: {
-        fetchEventsList () {
-            this.$http.get('events', (events) => {
-                this.list = events;
-            }).bind(this);
-        },
-        cancelAutoUpdate () { clearInterval(this.timer) }
-
-    },
-    beforeDestroy () {
-      clearInterval(this.timer)
-    }
-});
